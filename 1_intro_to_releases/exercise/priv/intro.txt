@@ -1,0 +1,3 @@
+Hello and welcome to our totally custom and awesome chat server!
+
+Please be kind, after all you're only speaking with yourself.

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -e
+
+cd exercise
+mix deps.get
+MIX_ENV=prod mix release
+mv _build/prod/rel/exercise ../release
