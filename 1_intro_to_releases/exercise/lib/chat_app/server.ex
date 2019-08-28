@@ -19,15 +19,27 @@ defmodule ChatApp.Server do
     {:reply, "messages are empty", messages}
   end
 
+    @motd File.read! "priv/intro.txt"
+
   @impl true
-  def handle_call(:motd, _from, _messages) do
+  def handle_call(:motd, _from, messages) do
     ## TODO: read the motd text file
+    # contents = "priv/intro.txt" |> File.read!
+    contents = Path.join(:code.priv_dir(:chat_app), "intro.txt")
+    |> IO.inspect(label: "location of the priv directory")
+    |> File.read!
+    
+    {:reply, contents, messages}
   end
 
   @impl true
   def handle_cast({:send, message}, messages) do
     IO.puts "message: #{message} added"
     {:noreply, [message | messages]}
+  end
+  
+  def motd do
+    GenServer.call(__MODULE__, :motd)
   end
 
   def push(message) do

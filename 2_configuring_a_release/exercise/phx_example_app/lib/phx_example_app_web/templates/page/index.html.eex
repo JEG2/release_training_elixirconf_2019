@@ -1,5 +1,7 @@
 <section class="phx-hero">
   <h1><%= gettext "Welcome to %{name}!", name: "Phoenix" %></h1>
+  <h2>Connected Nodes:<%= inspect Node.list %></h2>
+  <h3>Database URL: <%= Application.get_env(:phx_example_app, :database_url)%></h3>
   <p>A productive web framework that<br/>does not compromise speed or maintainability.</p>
 </section>
 

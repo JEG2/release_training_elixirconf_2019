@@ -7,7 +7,8 @@ defmodule Exercise.Application do
 
   def start(_type, _args) do
     children = [
-      {Exercise.JustOneProcess, []}
+      {Exercise.JustOneProcess, []},
+      {Exercise.NodeMonitor, []}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

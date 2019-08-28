@@ -1,0 +1,11 @@
+%% coding: utf-8
+{release,{"chat_app","0.1.0"},
+         {erts,"10.4"},
+         [{kernel,"6.4",permanent},
+          {stdlib,"3.9",permanent},
+          {elixir,"1.9.1",permanent},
+          {sasl,"3.4",permanent},
+          {chat_app,"0.1.0",permanent},
+          {iex,"1.9.1",none},
+          {compiler,"7.4",permanent},
+          {logger,"1.9.1",permanent}]}.
